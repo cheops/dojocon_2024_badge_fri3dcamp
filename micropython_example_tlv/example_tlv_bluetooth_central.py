@@ -41,7 +41,7 @@ class BLESimpleCentral:
         self._ble.irq(self._irq)
         return self
 
-    def __exit__(self, *args):
+    def __exit__(self, exc_type, exc_value, exc_tb):
         if exc_type is not None:
             print(f"{exc_type=} {exc_value=} {exc_tb=}")
         print("deactivate ble")
