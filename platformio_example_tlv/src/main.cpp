@@ -133,7 +133,7 @@ void parse_manufacturer_data(const uint8_t *data_array, const size_t data_length
 
         esp_err_t ret = apply_tlv(tlv_type, tlv_length, tlv_value);
         if (ret != ESP_OK) {
-            log_e();
+            log_e("there was an error: %d", ret);
         }
 
         // different from last, so save it
